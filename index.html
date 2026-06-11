@@ -2,7 +2,12 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#13283d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Giappone 2026">
+<meta name="format-detection" content="telephone=no">
 <title>Giappone 2026 — Guida completa · Osaka · Kyoto · Tokyo</title>
 <meta name="description" content="Guida di viaggio completa: 15 giorni in Giappone fra Osaka, Kyoto e Tokyo. Itinerario giorno per giorno, mappe, tips, curiosità e gastronomia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,6 +131,49 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
 .ck{display:flex;gap:9px;align-items:flex-start;font-size:.92rem;padding:5px 0;border-bottom:1px dotted var(--line);cursor:pointer;}
 .ck:last-child{border-bottom:none;}
 .ck input{margin-top:4px;accent-color:var(--verm);width:15px;height:15px;flex:0 0 auto;}
+
+/* ===== iOS / mobile ===== */
+html{-webkit-text-size-adjust:100%;}
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;}
+.tscroll::-webkit-scrollbar{height:6px;}
+.tscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.tscroll table{margin:0;}
+.phr{min-width:560px;}
+a,button,.chip{-webkit-tap-highlight-color:rgba(192,57,43,.15);}
+@media(max-width:640px){
+  body{font-size:15px;}
+  section{padding:36px 0;}
+  .wrap{padding:0 16px;}
+  .hero{padding-top:max(48px,env(safe-area-inset-top));}
+  .hero .sub{font-size:.98rem;}
+  .hmeta{gap:14px 22px;margin-top:20px;}
+  .sun{width:190px;height:190px;right:-60px;top:30px;}
+  .toc .wrap{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:9px 14px;}
+  .toc .wrap::-webkit-scrollbar{display:none;}
+  .toc a{white-space:nowrap;flex:0 0 auto;padding:8px 12px;}
+  .toc .brand{flex:0 0 auto;}
+  .mapwrap iframe{height:220px;}
+  .mapwrap.big iframe{height:240px;}
+  .dright .mapwrap iframe{height:200px;}
+  .dhead{padding:10px 14px;gap:10px;}
+  .dh-mid h4{font-size:1.06rem;}
+  .dcity{display:none;}
+  .dbody{padding:13px 14px 16px;}
+  .band{padding:13px 16px;}
+  .band h2{font-size:1.4rem;}
+  .band .nights{margin-left:0;flex-basis:100%;width:fit-content;}
+  .intro{padding:13px 16px;}
+  .card{padding:14px 16px;}
+  .newsbox,.obon,.factbox{padding:16px 18px;}
+  th,td{padding:9px 10px;}
+  .chip{padding:7px 12px;font-size:.78rem;}
+  .ck{padding:8px 0;}
+  .ck input{width:18px;height:18px;}
+  .tips li{margin:7px 0;}
+  footer .wrap{flex-direction:column;align-items:flex-start;}
+  footer div[style*="text-align:right"]{text-align:left!important;}
+}
 @media(max-width:840px){.dgrid{grid-template-columns:1fr;}.grid3{grid-template-columns:1fr;}.grid2{grid-template-columns:1fr;}.duo{grid-template-columns:1fr;}.flights{grid-template-columns:1fr;}}
 @media print{.toc{display:none;}body{background:#fff;}.mapwrap iframe{height:220px;}section{padding:24px 0;}.day,.card{page-break-inside:avoid;}.sun{display:none;}}
 </style>
@@ -219,33 +267,33 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
       <div class="card"><h3>🆘 Emergenze</h3><p>Polizia <b>110</b> · Ambulanza/Pompieri <b>119</b>. Giappone tra i Paesi più sicuri al mondo; documento sempre con sé (obbligo di legge).</p></div>
     </div>
     <h3 style="font-family:'Shippori Mincho B1';color:var(--indigo);margin:28px 0 8px;font-size:1.2rem;">Frasi utili 言葉</h3>
-    <table class="phr">
+    <div class="tscroll"><table class="phr">
       <tr><td class="it">Salve / Buongiorno</td><td class="ro">Konnichiwa</td><td class="jpn">こんにちは</td><td class="it">Grazie (formale)</td><td class="ro">Arigatō gozaimasu</td><td class="jpn">ありがとうございます</td></tr>
       <tr><td class="it">Scusi / Permesso</td><td class="ro">Sumimasen</td><td class="jpn">すみません</td><td class="it">Per favore</td><td class="ro">Onegai shimasu</td><td class="jpn">お願いします</td></tr>
       <tr><td class="it">Sì / No</td><td class="ro">Hai / Iie</td><td class="jpn">はい / いいえ</td><td class="it">Parla inglese?</td><td class="ro">Eigo wa hanasemasu ka?</td><td class="jpn">英語は話せますか</td></tr>
       <tr><td class="it">Quanto costa?</td><td class="ro">Ikura desu ka?</td><td class="jpn">いくらですか</td><td class="it">Dov'è il bagno?</td><td class="ro">Toire wa doko desu ka?</td><td class="jpn">トイレはどこですか</td></tr>
       <tr><td class="it">Buonissimo!</td><td class="ro">Oishii!</td><td class="jpn">おいしい</td><td class="it">Il conto, prego</td><td class="ro">Okanjō onegai shimasu</td><td class="jpn">お勘定お願いします</td></tr>
       <tr><td class="it">Alla salute!</td><td class="ro">Kanpai!</td><td class="jpn">乾杯</td><td class="it">Va bene / Ok</td><td class="ro">Daijōbu</td><td class="jpn">大丈夫</td></tr>
-    </table>
+    </table></div>
     <h3 style="font-family:'Shippori Mincho B1';color:var(--indigo);margin:26px 0 8px;font-size:1.2rem;">Kanji di sopravvivenza 看板</h3>
     <p class="muted" style="font-size:.9rem;max-width:75ch;">I caratteri che conviene saper riconoscere a vista: cartelli, porte e bagni non sempre hanno la versione in inglese.</p>
     <div class="grid2">
-      <table class="phr">
+      <div class="tscroll"><table class="phr">
         <tr><td class="jpn" style="font-size:1.3rem;">出口</td><td class="ro">deguchi</td><td class="it"><b>USCITA</b></td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">入口</td><td class="ro">iriguchi</td><td class="it"><b>ENTRATA</b></td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">駅</td><td class="ro">eki</td><td class="it">stazione</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">男</td><td class="ro">otoko</td><td class="it"><b>UOMO</b> (bagni!)</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">女</td><td class="ro">onna</td><td class="it"><b>DONNA</b> (bagni!)</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">押 / 引</td><td class="ro">osu / hiku</td><td class="it">SPINGI / TIRA (porte)</td></tr>
-      </table>
-      <table class="phr">
+      </table></div>
+      <div class="tscroll"><table class="phr">
         <tr><td class="jpn" style="font-size:1.3rem;">営業中</td><td class="ro">eigyōchū</td><td class="it">APERTO</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">準備中</td><td class="ro">junbichū</td><td class="it">CHIUSO / in preparazione</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">無料 / 有料</td><td class="ro">muryō / yūryō</td><td class="it">GRATIS / A PAGAMENTO</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">禁煙</td><td class="ro">kin'en</td><td class="it">vietato fumare</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">注意</td><td class="ro">chūi</td><td class="it">ATTENZIONE</td></tr>
         <tr><td class="jpn" style="font-size:1.3rem;">円</td><td class="ro">en</td><td class="it">yen (sui prezzi: 500円)</td></tr>
-      </table>
+      </table></div>
     </div>
   </div>
 </section>
@@ -258,7 +306,7 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
     <p class="muted" style="max-width:75ch;">La pronuncia indicata è "all'italiana": leggila come la vedi e ti capiranno. Regole rapide: le vocali si pronunciano tutte e sempre allo stesso modo, la <b>u</b> è spesso quasi muta (<i>dess</i> = desu), la <b>r</b> è dolce, a metà fra r e l, e l'accento è leggero — il giapponese è più "piatto" dell'italiano.</p>
 
     <h3 style="font-family:'Shippori Mincho B1';color:var(--indigo);margin:22px 0 8px;font-size:1.2rem;">Al ristorante 🍽️</h3>
-    <table class="phr">
+    <div class="tscroll"><table class="phr">
       <tr><td class="it">Scusi! (per chiamare il cameriere)</td><td class="ro">Sumimasen!</td><td class="jpn">すみません</td><td class="muted">su-mi-ma-<b>sén</b></td></tr>
       <tr><td class="it">Un tavolo per due</td><td class="ro">Futari desu</td><td class="jpn">二人です</td><td class="muted">fu-ta-ri dess</td></tr>
       <tr><td class="it">Avete un menù in inglese?</td><td class="ro">Eigo no menyū wa arimasu ka?</td><td class="jpn">英語のメニューはありますか</td><td class="muted">ee-go no me-niùu ua a-ri-mass ka</td></tr>
@@ -275,11 +323,11 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
       <tr><td class="it">Sono allergico/a a …</td><td class="ro">… arerugī ga arimasu</td><td class="jpn">…アレルギーがあります</td><td class="muted">a-re-ru-<b>ghíi</b> ga a-ri-mass</td></tr>
       <tr><td class="it">Senza carne, per favore</td><td class="ro">Oniku nashi de onegai shimasu</td><td class="jpn">お肉なしでお願いします</td><td class="muted">o-ni-ku na-sci de o-ne-gài sci-mass</td></tr>
       <tr><td class="it">Alla salute!</td><td class="ro">Kanpai!</td><td class="jpn">乾杯</td><td class="muted">kam-<b>pài</b></td></tr>
-    </table>
+    </table></div>
 
     <h3 style="font-family:'Shippori Mincho B1';color:var(--indigo);margin:26px 0 8px;font-size:1.2rem;">Dizionario dei piatti 🥢</h3>
     <div class="grid2">
-      <table class="phr">
+      <div class="tscroll"><table class="phr">
         <tr><td class="ro">Ramen</td><td class="jpn">ラーメン</td><td class="muted"><b>ràa</b>-men</td><td class="it">noodles in brodo (shōyu, miso, tonkotsu…)</td></tr>
         <tr><td class="ro">Sushi / Nigiri</td><td class="jpn">寿司</td><td class="muted">su-<b>sci</b> / ni-ghi-ri</td><td class="it">riso e pesce; il nigiri è la pallina con la fetta sopra</td></tr>
         <tr><td class="ro">Sashimi</td><td class="jpn">刺身</td><td class="muted">sa-<b>scí</b>-mi</td><td class="it">pesce crudo senza riso</td></tr>
@@ -289,8 +337,8 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
         <tr><td class="ro">Onigiri</td><td class="jpn">おにぎり</td><td class="muted">o-ni-<b>ghí</b>-ri</td><td class="it">triangolo di riso ripieno (il re del konbini)</td></tr>
         <tr><td class="ro">Udon</td><td class="jpn">うどん</td><td class="muted">u-<b>dòn</b></td><td class="it">noodles spessi di grano</td></tr>
         <tr><td class="ro">Soba</td><td class="jpn">そば</td><td class="muted"><b>só</b>-ba</td><td class="it">noodles sottili di grano saraceno, anche freddi</td></tr>
-      </table>
-      <table class="phr">
+      </table></div>
+      <div class="tscroll"><table class="phr">
         <tr><td class="ro">Takoyaki</td><td class="jpn">たこ焼き</td><td class="muted">ta-ko-<b>jà</b>-ki</td><td class="it">polpette di polpo (Osaka!) — attenzione: ustionanti</td></tr>
         <tr><td class="ro">Okonomiyaki</td><td class="jpn">お好み焼き</td><td class="muted">o-ko-no-mi-<b>jà</b>-ki</td><td class="it">"pizza-frittata" alla piastra (Osaka e Hiroshima)</td></tr>
         <tr><td class="ro">Kushikatsu</td><td class="jpn">串カツ</td><td class="muted">ku-sci-<b>kà</b>-tsu</td><td class="it">spiedini impanati e fritti (mai doppio tuffo in salsa!)</td></tr>
@@ -300,7 +348,7 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
         <tr><td class="ro">Mochi</td><td class="jpn">餅</td><td class="muted"><b>mó</b>-ci</td><td class="it">dolcetto di riso pestato, spesso ripieno</td></tr>
         <tr><td class="ro">Matcha</td><td class="jpn">抹茶</td><td class="muted">mat-<b>cià</b></td><td class="it">tè verde in polvere (a Uji il migliore)</td></tr>
         <tr><td class="ro">Kakigōri</td><td class="jpn">かき氷</td><td class="muted">ka-ki-<b>góo</b>-ri</td><td class="it">ghiaccio tritato sciroppato: salvavita d'agosto</td></tr>
-      </table>
+      </table></div>
     </div>
 
     <div class="duo" style="margin-top:18px;">
@@ -340,7 +388,7 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
     <div class="sec-head"><div class="jp">予算</div><h2>Budget indicativo</h2><div class="rule"></div></div>
     <p class="muted" style="max-width:75ch;">Stime per persona, cambio indicativo 1 € ≈ ¥170 (verifica il cambio reale prima di partire). Voli e hotel sono già acquistati e quindi esclusi.</p>
     <div class="grid2" style="margin-top:14px;">
-      <table>
+      <div class="tscroll"><table>
         <tr><th>Trasporti</th><th>Stima p.p.</th></tr>
         <tr><td>Shinkansen Osaka ⇄ Hiroshima (A/R, riservato)</td><td>~¥21.000 (~€124)</td></tr>
         <tr><td>Shinkansen Kyoto → Tokyo (Nozomi, riservato)</td><td>~¥14.000 (~€82)</td></tr>
@@ -348,8 +396,8 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
         <tr><td>Treni/metro urbani (media al giorno)</td><td>¥800–1.200</td></tr>
         <tr><td>KIX → Namba (Rapi:t) + Haneda transfer</td><td>~¥2.700 totale</td></tr>
         <tr><td>Treni Nara A/R + Kyoto transfer</td><td>~¥2.500 totale</td></tr>
-      </table>
-      <table>
+      </table></div>
+      <div class="tscroll"><table>
         <tr><th>Ingressi & pasti</th><th>Stima p.p.</th></tr>
         <tr><td>USJ: Studio Pass + Express Pass</td><td>~¥9.000–10.900 + ¥10.000–30.000</td></tr>
         <tr><td>Templi e castelli (¥300–600 l'uno)</td><td>~¥4.000 totale viaggio</td></tr>
@@ -357,7 +405,7 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
         <tr><td>Pasto konbini / ramen / izakaya / kaiseki</td><td>¥600 / ¥1.200 / ¥3.500 / ¥10.000+</td></tr>
         <tr><td>Vitto medio giornaliero (mix realistico)</td><td>¥5.000–8.000 (~€30–47)</td></tr>
         <tr><td><b>Spesa viva media/giorno (escl. USJ)</b></td><td><b>~¥12.000–17.000 (~€70–100)</b></td></tr>
-      </table>
+      </table></div>
     </div>
     <p class="muted" style="font-size:.85rem;margin-top:10px;">Prezzi indicativi, da verificare sui siti ufficiali: in Giappone le tariffe cambiano di rado, ma USJ usa prezzi dinamici per data.</p>
 
@@ -799,7 +847,7 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
 <section id="prenota" style="background:var(--washi2);">
   <div class="wrap">
     <div class="sec-head"><div class="jp">予約</div><h2>Cosa prenotare e quando</h2><div class="rule"></div></div>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Voce</th><th>Quando</th><th>Priorità</th><th>Note</th></tr>
       <tr><td>Shinkansen Kyoto → Tokyo (18/8)</td><td>Appena aprono le vendite (~1 mese prima)</td><td>🔴 Alta</td><td>Posto riservato; lato destro (posti E) per il Fuji.</td></tr>
       <tr><td>Shinkansen Osaka ⇄ Hiroshima (12/8)</td><td>~1 mese prima</td><td>🔴 Alta</td><td>Andata e ritorno insieme; partenza entro le 7:00.</td></tr>
@@ -809,10 +857,10 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
       <tr><td>Limousine Bus Shinjuku → Haneda (23/8)</td><td>Pochi giorni prima</td><td>🟡 Media</td><td>Corsa con arrivo a Haneda entro le ~8:45.</td></tr>
       <tr><td>Shibuya Sky · teamLab Planets · Kaiyukan</td><td>1–2 settimane prima</td><td>🟢 Bassa</td><td>Biglietti a fascia oraria; per Shibuya Sky puntate al tramonto.</td></tr>
       <tr><td>Cena kaiseki o kawayuka a Kyoto</td><td>1–2 settimane prima</td><td>🟢 Bassa</td><td>I posti sulle terrazze del fiume vanno via in fretta d'estate.</td></tr>
-    </table>
+    </table></div>
     
     <h3 style="font-family:'Shippori Mincho B1';color:var(--indigo);margin:30px 0 8px;font-size:1.2rem;">Countdown operativo ⏱</h3>
-    <table>
+    <div class="tscroll"><table>
       <tr><th>Quando</th><th>Cosa fare</th></tr>
       <tr><td><b>T-90 giorni</b> (≈ 10 mag)</td><td>Apre la prenotazione del Museo della Pace di Hiroshima: blocca lo slot 9:00–10:00 del 12/8.</td></tr>
       <tr><td><b>T-60</b> (≈ 10 giu)</td><td>USJ: monitora l'uscita di Studio Pass ed Express Pass per il 13/8 e compra appena disponibili. Verifica condizioni hotel.</td></tr>
@@ -821,7 +869,7 @@ footer .jp{font-family:"Shippori Mincho B1",serif;color:#e9c98f;letter-spacing:.
       <tr><td><b>T-7</b> (1 ago)</td><td>Limousine Bus Shinjuku→Haneda del 23/8 · attiva/installa l'eSIM · controlla previsioni tifoni · cambio valuta di base.</td></tr>
       <tr><td><b>T-1</b> (7 ago)</td><td>Check-in online del volo · valigie con la checklist · scarica mappe offline di Osaka/Kyoto/Tokyo · salva questa guida sul telefono.</td></tr>
       <tr><td><b>In viaggio</b></td><td>Ogni sera: conferma il piano del giorno dopo e gli orari di apertura; la mattina di Hakone (21/8), webcam del Fuji prima di uscire.</td></tr>
-    </table>
+    </table></div>
     <p class="muted" style="font-size:.85rem;margin-top:12px;">Templi, santuari, quartieri e mercati non richiedono prenotazione. Orari, tariffe e calendari vanno comunque verificati sui siti ufficiali a ridosso della partenza: questa guida è una bozza di lavoro, non sostituisce le fonti ufficiali.</p>
   </div>
 </section>
